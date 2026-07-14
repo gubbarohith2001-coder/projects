@@ -18,16 +18,16 @@ class UI {
     const list = document.querySelector("#book-list");
 
     const row = document.createElement("tr");
-    row.className = `bg-white`
+    row.className = `bg-white`;
     row.innerHTML = `
-    <td class="py-4 px-3">${book.title}</td>
-    <td>${book.author}</td>
-    <td>${book.isbn}</td>
+    <td class="py-3 px-3 text-sm sm:text-base">${book.title}</td>
+    <td class="text-sm sm:text-base">${book.author}</td>
+    <td class="text-sm sm:text-base">${book.isbn}</td>
     <td>
-    <a href = "#" class= "bg-red-500 text-white p-2 px-3 rounded-lg  delete">X</a>
+    <a href = "#" class= "bg-red-500 text-white px-3 py-2 rounded-lg  delete">X</a>
     </td>
     <td>
-    <a href = "#" class= "bg-gray-500 text-white p-2 rounded-lg  update">
+    <a href = "#" class= "bg-gray-500 text-white px-3 py-2 rounded-lg  update">
     <i class="fa-regular fa-pen-to-square"></i>
     </a>
     </td>
@@ -204,7 +204,6 @@ document.querySelector("#book-list").addEventListener("click", (e) => {
   if (editBtn) {
     UI.editBook(editBtn);
   }
-
 });
 
 // Event : Search / Filter books

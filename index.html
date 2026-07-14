@@ -14,65 +14,77 @@
     <title>My Book List</title>
   </head>
   <body>
-    <div class="container mt-4 mx-auto">
-      <h1 class="text-6xl text-center">
+    <div class="container max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mt-4">
+      <h1
+        class="text-3xl sm:text-5xl md:text-6xl text-center flex justify-center items-center gap-2 flex-wraptext-lg sm:text-xl md:text-2xl"
+      >
         <i class="fa fa-book-open text-blue-500"></i>
 
         My<span class="text-blue-500"> Book</span> List
       </h1>
       <form id="book-form">
-        <div class="my-6">
-          <label for="title" class="text-2xl ml-2">Title :</label><br />
+        <div class="my-5">
+          <label for="title" class="text-lg sm:text-xl md:text-2xl"
+            >Title :</label
+          ><br />
           <input
             id="title"
             type="text"
-            class="w-full h-14 mt-3 px-4 py-2 border border-slate-400"
+            class="w-full h-12 sm:h-14 mt-3 px-4 py-2 border border-slate-400 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
         </div>
-        <div class="my-6">
-          <label for="author" class="text-2xl ml-2">Author :</label><br />
+        <div class="my-5">
+          <label for="author" class="text-lg sm:text-xl md:text-2xl"
+            >Author :</label
+          ><br />
           <input
             id="author"
             type="text"
-            class="w-full h-14 mt-3 px-4 py-2 border border-slate-400"
+            class="w-full h-12 sm:h-14 mt-3 px-4 py-2 border border-slate-400 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
         </div>
-        <div class="my-6">
-          <label for="isbn" class="text-2xl ml-2">ISBN# :</label><br />
+        <div class="my-5">
+          <label for="isbn" class="text-lg sm:text-xl md:text-2xl"
+            >ISBN# :</label
+          ><br />
           <input
             id="isbn"
             type="text"
-            class="w-full h-14 mt-3 px-4 py-2 border border-slate-400"
+            class="w-full h-12 sm:h-14 mt-3 px-4 py-2 border border-slate-400 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
         </div>
         <div>
           <input
             type="submit"
             value="Add Book"
-            class="bg-blue-500 text-white w-full h-14 mt-3 text-2xl hover:bg-blue-600 hover:cursor-pointer"
+            class="bg-blue-500 hover:bg-blue-600 text-white w-full h-12 sm:h-14 mt-3 text-lg sm:text-xl rounded-md cursor-pointer hover:bg-blue-600 hover:cursor-pointer"
           />
         </div>
       </form>
-      <div class="mt-8 flex justify-between border border-gray-500 rounded-2xl bg-gray-100">
+      <div
+        class="mt-8 flex items-center border border-gray-400 rounded-xl bg-gray-100 overflow-hidden"
+      >
         <input
           type="text"
           placeholder="Search by Title, Author, or ISBN..."
-          class="search focus:outline-none p-2 text-2xl w-full"
+          class="search w-full p-3 text-base sm:text-lg md:text-xl bg-transparent focus:outline-none"
         />
-        <i class="fa fa-search text-3xl m-2 text-gray-500"></i>
+        <i class="fa fa-search text-xl sm:text-2xl text-gray-500"></i>
       </div>
-      <table class="min-w-full border border-gray-300 mt-8 mr-4 mb-24 ">
-        <thead class="bg-gray-300 h-12">
-          <tr>
-            <th class="text-xl">Title</th>
-            <th class="text-xl">Author</th>
-            <th class="text-xl">ISBN#</th>
-            <th class="text-xl">Delete</th>
-            <th class="text-xl">Update</th>
-          </tr>
-        </thead>
-        <tbody id="book-list" class="h-12 text-center "></tbody>
-      </table>
+      <div class="overflow-x-auto mt-8 mb-24">
+        <table class="min-w-full border border-gray-300">
+          <thead class="bg-gray-300 h-12">
+            <tr>
+              <th class="text-sm sm:text-lg px-3 py-3">Title</th>
+              <th class="text-sm sm:text-lg px-3 py-3">Author</th>
+              <th class="text-sm sm:text-lg px-3 py-3">ISBN#</th>
+              <th class="text-sm sm:text-lg px-3 py-3">Delete</th>
+              <th class="text-sm sm:text-lg px-3 py-3">Update</th>
+            </tr>
+          </thead>
+          <tbody id="book-list" class="h-12 text-center"></tbody>
+        </table>
+      </div>
     </div>
     <script src="script.js"></script>
   </body>
